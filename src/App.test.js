@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import {render, screen} from '@testing-library/react'
-import userEvent from "@testing-library/user-event";
-import {BrowserRouter as Router} from 'react-router-dom';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { BrowserRouter as Router } from 'react-router-dom';
 import '@testing-library/jest-dom/extend-expect';
 import Calculator from './components/Calculator';
 import Header from './components/Header';
@@ -18,17 +18,22 @@ describe('Functions test', () => {
       next: null,
       operation: null,
     };
-    const buttonName = '='
-    if(buttonName === '.') {
-      expect(calculate(initialItems, buttonName)).toEqual({ total: 0,next: null,operation: null });
-    } else if(buttonName === '.') {
-      expect(calculate(initialItems, buttonName)).toEqual({ total: 0.,next: null,operation: null });
-    } else if(buttonName === '1') {
-      expect(calculate(initialItems, buttonName)).toEqual({ total: null,next: '1'});
-    } else if(buttonName === '=') {
+    const buttonName = '=';
+    if (buttonName === '.') {
+      expect(calculate(initialItems, buttonName)).toEqual(
+        { total: 0, next: null, operation: null },
+      );
+    } else if (buttonName === '.') {
+      expect(calculate(initialItems, buttonName)).toEqual(
+        { total: 0.0, next: null, operation: null },
+      );
+    } else if (buttonName === '1') {
+      expect(calculate(initialItems, buttonName)).toEqual(
+        { total: null, next: '1' },
+      );
+    } else if (buttonName === '=') {
       expect(calculate(initialItems, buttonName)).toEqual({});
     }
-
   });
 
   test('operate.js addition test', () => {
