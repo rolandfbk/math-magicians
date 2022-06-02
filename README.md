@@ -16,6 +16,11 @@
 ## Test
 >- npm test
 
+## Live Demo
+
+[Live Demo Link from Heroku](https://math-magicians-roland.herokuapp.com/)
+[Live Demo Link from Netlify](https://heroic-caramel-5175f7.netlify.app/)
+
 ## Author
 
 👤 **Roland Ossisa Yuma**
